@@ -1,3 +1,3 @@
 # Trilha Python DIO
 
-"Estudando a trila"
+"Estudando a trilha"
