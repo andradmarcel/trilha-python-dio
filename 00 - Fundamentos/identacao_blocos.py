@@ -1,7 +1,7 @@
 def sacar(saldo, valor):
     if saldo >= valor:
         saldo -= valor
-        print("valor sacado!")
+        print(f"valor sacado {valor}!")
         print("retire o seu dinheiro na boca do caixa.")
         return saldo
     else:
