@@ -16,11 +16,12 @@ while True:
         elif valor_emprestimo > salario * 5:
             print("Empréstimo Recusado. O valor total solicitado excede 5 vezes o seu salário.")
         else:
-            print("Empréstimo Aprovado!")
+            print("Empréstimo Aprovado!") 
             print(f"Sua parcela ficou no valor de R$ {parcela_mensal:.2f}")
         
         sair = input("Sair? [s/n]: ")
         if sair.lower() == "s":
+            
             break
         
     except ValueError:
