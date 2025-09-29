@@ -11,9 +11,9 @@ while True:
         porcentagem_salario = salario * 0.30
         parcela_mensal = valor_emprestimo / parcelas
         
-        if parcela_mensal >= porcentagem_salario:
+        if parcela_mensal > porcentagem_salario:
             print("Empréstimo Recusado. O valor da parcela excede 30% do seu salário.")
-        elif valor_emprestimo >= salario * 5:
+        elif valor_emprestimo > salario * 5:
             print("Empréstimo Recusado. O valor total solicitado excede 5 vezes o seu salário.")
         else:
             print("Empréstimo Aprovado!")
