@@ -2,8 +2,8 @@ def somar(a, b):
     return a + b
 
 
-def exibir_resultado(a, b, funcao):
-    resultado = funcao(a, b)
+def exibir_resultado(a, b, funcao_somar):
+    resultado = funcao_somar(a, b)
     print(f"O resultado da operação {a} + {b} = {resultado}")
 
 
