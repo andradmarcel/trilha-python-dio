@@ -43,12 +43,18 @@ while True:
             sim_ou_nao = input(f"Gostaria de adicionar uma nova materia e nota para o aluno(a) {nome.title()} [s/n]: ").lower().strip()
             if sim_ou_nao == "s" or sim_ou_nao == "sim":
                 nova_materia = input("Digite a materia: ").lower().strip()
-                nova_nota = int(input("Digite a nota: "))
-                notas.update(nova_materia, nova_nota)
-                for materia, nota in notas.items():
-                    print(f"{materia.title()} nota: {nota:.2f}")
+                try:                   
+                    nova_nota = float(input("Digite a nota: ").replace(',', '.'))
+                    notas[nova_materia] = nova_nota
+                    print(f"\nNota de {nova_materia.title()} adicionada com sucesso!")
+                    print(f"--- Notas atualizadas de {nome.title()} ---")
+                    for materia, nota in notas.items():
+                        print(f"{materia.title()} nota: {nota:.2f}")
+                except ValueError:
+                    print("Erro: A nota digitada não é um número válido. A operação foi cancelada.")
+                    
             else:
-                print("voltando")
+                print("Ok, voltando ao menu de consulta.")
                 
                 
                 
